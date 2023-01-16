@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:page_transition/page_transition.dart';
+import 'package:plant_app/screens/sign_in_screen.dart';
 import '../components/profile_widget.dart';
 import '../constants.dart';
 
@@ -68,7 +69,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
               width: size.width,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children: const [
+                children: [
                   ProfileWidget(
                     icon: Icons.person,
                     title: 'My Profile',
@@ -87,10 +88,15 @@ class _MyProfilePageState extends State<MyProfilePage> {
                     icon: Icons.settings,
                     title: 'Settings',
                   ),
-                  ProfileWidget(
-                    icon: Icons.logout,
-                    title: 'Log Out',
-                  ),
+                  GestureDetector(
+                      child: ProfileWidget(icon: Icons.logout, title: 'Logout'),
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        PageTransition(
+                            child: SignIn(),
+                            type: PageTransitionType.bottomToTop));
+                  },)
                 ],
               ),
             ),
