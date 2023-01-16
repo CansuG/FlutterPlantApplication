@@ -53,17 +53,17 @@ class _LaunchScreenState extends State<LaunchScreen> {
             controller: _pageController,
             children: [
               createPage(
-                image: "assets/images/plant-one.png",
+                image: "assets/images/first-image.png",
                 title: Constants.titleOne,
                 description: Constants.descriptionOne,
               ),
               createPage(
-                image: "assets/images/plant-two.png",
+                image: "assets/images/second-image.png",
                 title: Constants.titleTwo,
                 description: Constants.descriptionTwo,
               ),
               createPage(
-                image: "assets/images/plant-three.png",
+                image: "assets/images/third-image.png",
                 title: Constants.titleThree,
                 description: Constants.descriptionThree,
               ),

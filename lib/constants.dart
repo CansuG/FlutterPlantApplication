@@ -7,10 +7,12 @@ class Constants {
   static var descpColor = const Color(0xffb485460);
 
   //Onboarding texts
-  static var titleOne = "Take care of your plants";
-  static var descriptionOne = "Learn how to care your lovely plants";
-  static var titleTwo = "Meet with new plants";
+  static var titleOne = "WELCOME TO FloraFriend";
+  static var descriptionOne =
+      "Enjoy using the application and meet new plants!";
+  static var titleTwo = "Learn more about plants and flowers";
   static var descriptionTwo = "Wouldn't you like to host more plants?";
   static var titleThree = "Now Green, Always Green";
-  static var descriptionThree = "Flowers and plants are your ultimate friends";
+  static var descriptionThree =
+      "Remember, flowers and plants are your ultimate friends.";
 }

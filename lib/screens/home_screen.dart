@@ -148,16 +148,19 @@ class _HomePageState extends State<HomePage> {
                                     onPressed: () {
                                       bool isFavorited = toggleIsFavorited(
                                           _plantList[index].isFavorited);
-                                      _plantList[index].isFavorited = isFavorited;
+                                      _plantList[index].isFavorited =
+                                          isFavorited;
 
                                       if (isFavoritedProvider == false) {
                                         Provider.of<FavoritesModel>(context,
-                                            listen: false)
-                                            .addToFavoritesItem(_plantList[index]);
+                                                listen: false)
+                                            .addToFavoritesItem(
+                                                _plantList[index]);
                                       } else {
                                         Provider.of<FavoritesModel>(context,
-                                            listen: false)
-                                            .deleteFromFavorites(_plantList[index]);
+                                                listen: false)
+                                            .deleteFromFavorites(
+                                                _plantList[index]);
                                       }
                                     },
                                     icon: Icon(isFavoritedProvider == true
@@ -167,7 +170,8 @@ class _HomePageState extends State<HomePage> {
                                     iconSize: 24,
                                   );
                                 },
-                                selector: (context, model) => _plantList[index].isFavorited,
+                                selector: (context, model) =>
+                                    _plantList[index].isFavorited,
                               ),
                               decoration: BoxDecoration(
                                 color: Colors.white,
@@ -176,39 +180,48 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                           Positioned(
-                              top: 60,
-                              right: 20,
-                              child: Container(
-                                height: 40,
-                                width: 40,
-                                child: Selector<CartModel, bool>
-                                  (builder: (context, isSelectedProvider, child){
+                            top: 60,
+                            right: 20,
+                            child: Container(
+                              height: 40,
+                              width: 40,
+                              child: Selector<CartModel, bool>(
+                                  builder:
+                                      (context, isSelectedProvider, child) {
                                     return IconButton(
                                       onPressed: () {
-                                        bool isSelected =
-                                        toggleIsSelected(_plantList[index].isSelected);
+                                        bool isSelected = toggleIsSelected(
+                                            _plantList[index].isSelected);
 
-                                        _plantList[index].isSelected = isSelected;
+                                        _plantList[index].isSelected =
+                                            isSelected;
 
                                         if (isSelected == true) {
-                                          Provider.of<CartModel>(context, listen: false)
+                                          Provider.of<CartModel>(context,
+                                                  listen: false)
                                               .addCartItem(_plantList[index]);
                                         } else {
-                                          Provider.of<CartModel>(context, listen: false)
-                                              .deleteCartItem(_plantList[index]);
+                                          Provider.of<CartModel>(context,
+                                                  listen: false)
+                                              .deleteCartItem(
+                                                  _plantList[index]);
                                         }
                                       },
-                                      icon: Icon(_plantList[index].isSelected == true
-                                          ? Icons.shopping_cart
-                                          : Icons.shopping_cart_outlined),
-                                        color: Constants.primaryColor,
+                                      icon: Icon(
+                                          _plantList[index].isSelected == true
+                                              ? Icons.shopping_cart
+                                              : Icons.shopping_cart_outlined),
+                                      color: Constants.primaryColor,
                                     );
-                                }, selector: (context, model) => _plantList[index].isSelected),
-                                decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(50.0),
-                                ),
-                              ),),
+                                  },
+                                  selector: (context, model) =>
+                                      _plantList[index].isSelected),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(50.0),
+                              ),
+                            ),
+                          ),
                           Positioned(
                             left: 50,
                             right: 50,
@@ -291,7 +304,7 @@ class _HomePageState extends State<HomePage> {
                   physics: const BouncingScrollPhysics(),
                   itemBuilder: (BuildContext context, int index) {
                     return PlantWidget(
-                      index: selectedIndex,
+                      index: index,
                       plantList: _plantList,
                     );
                   }),

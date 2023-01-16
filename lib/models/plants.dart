@@ -14,17 +14,17 @@ class Plant {
 
   Plant(
       {required this.plantID,
-        required this.price,
-        required this.category,
-        required this.plantName,
-        required this.size,
-        required this.rating,
-        required this.humidity,
-        required this.temperature,
-        required this.imageURL,
-        required this.isFavorited,
-        required this.description,
-        required this.isSelected});
+      required this.price,
+      required this.category,
+      required this.plantName,
+      required this.size,
+      required this.rating,
+      required this.humidity,
+      required this.temperature,
+      required this.imageURL,
+      required this.isFavorited,
+      required this.description,
+      required this.isSelected});
 
   //List of Plants data
   static List<Plant> plantList = [
@@ -40,7 +40,7 @@ class Plant {
         imageURL: 'assets/images/plant-one.png',
         isFavorited: false,
         description:
-        'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
+            'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
             'even the harshest weather condition.',
         isSelected: false),
     Plant(
@@ -55,8 +55,7 @@ class Plant {
         imageURL: 'assets/images/plant-two.png',
         isFavorited: false,
         description:
-        'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
-            'even the harshest weather condition.',
+            'The foliage of philodendrons is usually green but may be coppery, red, or purplish; parallel leaf veins are usually green or sometimes red or white.',
         isSelected: false),
     Plant(
         plantID: 2,
@@ -70,8 +69,7 @@ class Plant {
         imageURL: 'assets/images/plant-three.png',
         isFavorited: false,
         description:
-        'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
-            'even the harshest weather condition.',
+            'This plant lives in the humid tropical forests, in the lowlands and middle mountains, in the extreme south of Mexico and also in Belize, Honduras, El Salvador, Costa Rica, and Panama.',
         isSelected: false),
     Plant(
         plantID: 3,
@@ -85,8 +83,7 @@ class Plant {
         imageURL: 'assets/images/plant-one.png',
         isFavorited: false,
         description:
-        'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
-            'even the harshest weather condition.',
+            "It is an evergreen climbing vine that typically grows to 3-6' long. As a houseplant, it is typically grown for its attractive ornamental foliage which changes shape as the leaves mature.",
         isSelected: false),
     Plant(
         plantID: 4,
@@ -100,8 +97,7 @@ class Plant {
         imageURL: 'assets/images/plant-four.png',
         isFavorited: false,
         description:
-        'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
-            'even the harshest weather condition.',
+            'An essential grass for grassland restoration and prairie gardens in the central plains. Large stature, blue-green foliage, and interesting flowering heads.',
         isSelected: false),
     Plant(
         plantID: 5,
@@ -115,7 +111,7 @@ class Plant {
         imageURL: 'assets/images/plant-five.png',
         isFavorited: false,
         description:
-        'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
+            'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
             'even the harshest weather condition.',
         isSelected: false),
     Plant(
@@ -130,8 +126,7 @@ class Plant {
         imageURL: 'assets/images/plant-six.png',
         isFavorited: false,
         description:
-        'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
-            'even the harshest weather condition.',
+            'Plumbago is a genus of 10–20 species of flowering plants in the family Plumbaginaceae, native to warm temperate to tropical regions of the world.',
         isSelected: false),
     Plant(
         plantID: 7,
@@ -145,8 +140,7 @@ class Plant {
         imageURL: 'assets/images/plant-seven.png',
         isFavorited: false,
         description:
-        'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
-            'even the harshest weather condition.',
+            'Tritonia are small bulbous plants up to 80 cm. It produces a fan of short, lance-shaped leaves in autumn and a spike of numerous bright fiery orange or reddish orange.',
         isSelected: false),
     Plant(
         plantID: 8,
@@ -160,9 +154,7 @@ class Plant {
         imageURL: 'assets/images/plant-eight.png',
         isFavorited: false,
         description:
-        'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
-            'even the harshest weather condition.',
+            'Tritonia crocata is a striking, late spring and early summer-flowering plant with fiery orange or reddish orange flower sprays and a fan of short, lance-shaped leaves.',
         isSelected: false),
   ];
-
 }
