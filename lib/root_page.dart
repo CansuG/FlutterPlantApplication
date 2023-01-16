@@ -18,10 +18,9 @@ class RootPage extends StatefulWidget {
 }
 
 class _RootPageState extends State<RootPage> {
-
   List<String> titleList = [
     'Home',
-    'Favorite',
+    'Favorites',
     'Cart',
     'Profile',
   ];
@@ -35,7 +34,6 @@ class _RootPageState extends State<RootPage> {
 
   @override
   Widget build(BuildContext context) {
-
     return Consumer<TabModel>(builder: (context, tabManager, child) {
       return Scaffold(
         appBar: AppBar(
@@ -93,6 +91,4 @@ class _RootPageState extends State<RootPage> {
       );
     });
   }
-
-
 }
