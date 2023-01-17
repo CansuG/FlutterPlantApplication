@@ -1,16 +1,13 @@
-# plant_app
+When the user opens the application, they see a screen where they can get information about the application. We thought this would be more guiding for the
+user.
 
-A new Flutter project.
+Users can access some information about plants, the conditions necessary for their survival, and the prices through our app by clicking on a plant.
 
-## Getting Started
+After logging in, they can also favorite the plants they like and then view them from the favorites page. They can also add plants to their cart in a similar way. Then, they
+can see the total price that they must pay to buy plants.
 
-This project is a starting point for a Flutter application.
+On the profile page, there is a section called 'My Plants'. We aimed to enable users to add their own plants and information about their plants on this page.
 
-A few resources to get you started if this is your first Flutter project:
+We created the profile page, but we didn't give it functionality except for the Logout and My Plant sections. Logout redirects the user to Sign In page and the user
+can go back to the profile page from the My Plants page.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
