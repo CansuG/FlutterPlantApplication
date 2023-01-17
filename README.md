@@ -1,3 +1,5 @@
+Plant Based Flutter Application : FloraFriend
+
 When the user opens the application, they see a screen where they can get information about the application. We thought this would be more guiding for the
 user.
 
