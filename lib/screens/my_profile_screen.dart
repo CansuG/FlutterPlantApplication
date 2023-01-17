@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:plant_app/models/plant_model.dart';
+import 'package:plant_app/screens/my_plant_item_screen.dart';
+import 'package:plant_app/screens/my_plants_list_screen.dart';
 import 'package:plant_app/screens/sign_in_screen.dart';
+import 'package:provider/provider.dart';
 import '../components/profile_widget.dart';
 import '../constants.dart';
 
@@ -74,8 +78,20 @@ class _MyProfilePageState extends State<MyProfilePage> {
                     icon: Icons.person,
                     title: 'My Profile',
                   ),
-                  ProfileWidget(
-                      icon: Icons.compost_outlined, title: "My Plants"),
+                  GestureDetector(
+                    child: ProfileWidget(
+                        icon: Icons.compost_outlined, title: "My Plants"),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              child: Provider(
+                                create: (context) => MyPlantModel(),
+                                child: MyPlantListPage(),
+                              ),
+                              type: PageTransitionType.bottomToTop));
+                    },
+                  ),
                   ProfileWidget(
                     icon: Icons.notifications,
                     title: 'Notifications',
@@ -89,14 +105,15 @@ class _MyProfilePageState extends State<MyProfilePage> {
                     title: 'Settings',
                   ),
                   GestureDetector(
-                      child: ProfileWidget(icon: Icons.logout, title: 'Logout'),
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        PageTransition(
-                            child: SignIn(),
-                            type: PageTransitionType.bottomToTop));
-                  },)
+                    child: ProfileWidget(icon: Icons.logout, title: 'Logout'),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              child: SignIn(),
+                              type: PageTransitionType.bottomToTop));
+                    },
+                  )
                 ],
               ),
             ),
