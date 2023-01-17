@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:plant_app/screens/my_plants_list_screen.dart';
 import 'package:plant_app/screens/sign_in_screen.dart';
 import '../components/profile_widget.dart';
 import '../constants.dart';
@@ -74,8 +75,17 @@ class _MyProfilePageState extends State<MyProfilePage> {
                     icon: Icons.person,
                     title: 'My Profile',
                   ),
-                  ProfileWidget(
-                      icon: Icons.compost_outlined, title: "My Plants"),
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              child: MyPlantsListScreen(),
+                              type: PageTransitionType.bottomToTop));
+                    },
+                    child: ProfileWidget(
+                        icon: Icons.compost_outlined, title: "My Plants"),
+                  ),
                   ProfileWidget(
                     icon: Icons.notifications,
                     title: 'Notifications',

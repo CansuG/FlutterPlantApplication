@@ -1,34 +1,20 @@
 class MyPlant {
   final String plantId;
-  final String? size;
+  final String imageURL;
+  final String size;
   final String plantName;
-  final String? myPlantName;
-  final String? description;
-  final bool isWatered;
 
   MyPlant({
     required this.plantId,
+    required this.imageURL,
     required this.plantName,
-    this.myPlantName,
-    this.size,
-    this.description,
-    this.isWatered = false,
+    required this.size,
   });
 
-  MyPlant copyWith({
-    String? plantId,
-    String? size,
-    String? plantName,
-    String? myPlantName,
-    String? description,
-    bool? isWatered,
-  }) {
-    return MyPlant(
-        plantId: plantId ?? this.plantId,
-        size: size ?? this.size,
-        plantName: plantName ?? this.plantName,
-        myPlantName: myPlantName ?? this.myPlantName,
-        description: description ?? this.description,
-        isWatered: isWatered?? this.isWatered);
-  }
+  static List<MyPlant> myPlantList = [
+    MyPlant(plantId: '0', imageURL: 'assets/images/rose.jpeg', plantName: 'Rose', size: '15 cm'),
+    MyPlant(plantId: '1', imageURL: 'assets/images/cactus.jpeg', plantName: 'Cactus',size: '6 cm'),
+    MyPlant(plantId: '2', imageURL: 'assets/images/violet.jpeg', plantName: 'Violet',size: '8 cm'),
+  ];
+
 }
