@@ -89,14 +89,15 @@ class _MyProfilePageState extends State<MyProfilePage> {
                     title: 'Settings',
                   ),
                   GestureDetector(
-                      child: ProfileWidget(icon: Icons.logout, title: 'Logout'),
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        PageTransition(
-                            child: SignIn(),
-                            type: PageTransitionType.bottomToTop));
-                  },)
+                    child: ProfileWidget(icon: Icons.logout, title: 'Logout'),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              child: SignIn(),
+                              type: PageTransitionType.bottomToTop));
+                    },
+                  )
                 ],
               ),
             ),
